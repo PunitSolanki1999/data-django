@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database Server Practise</title>
+        <style>
+            body{
+                background-color:rgb(6, 8, 39);
+            }
+            div{
+                margin-top:40px;
+                margin-left:510px;
+                background-color:rgb(20, 20, 20);
+                border:1px solid black;
+                border-radius:25px;
+                width: 500px;
+                padding: 20px;
+                text-align:center;
+                color:white;
+            }
+            .field{
+                padding:7px 25px 7px 25px;
+                margin-top:10px;
+                margin-bottom:10px;
+                border-radius:25px;
+                border:2px solid;
+                background-color:transparent;
+                color:greenyellow;
+                border-color:blue;
+                transition:0.4s;
+                text-align:center;
+            }
+            .field:hover{
+                border-color:green;
+                background-color: green;
+                transition: 0.4s;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form action='.' method="POST">{% csrf_token %}
+            <div>
+                <h1>Welcome {{user}} To The Site</h1><br>
+                <a class='field' href="{% url 'user:logout' %}">Logout</a>
+            </div>
+        </form>
+    </body>
+</html>
